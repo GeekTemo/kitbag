@@ -62,6 +62,9 @@ def sync_file(source_file, dirs):
 
 
 def sync(dir1, dir2, *dirs):
+    '''
+    Sync directories
+    '''
     all_dirs = [d for d in dirs]
     all_dirs.insert(0, dir2)
     all_dirs.insert(0, dir1)
