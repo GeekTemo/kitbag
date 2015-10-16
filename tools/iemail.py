@@ -3,8 +3,8 @@ __author__ = 'gongxingfa'
 import getpass,poplib, email,string
 
 m = poplib.POP3('pop.163.com')
-m.user('18650090314@163.com')
-m.pass_('gxf921758')
+m.user('')
+m.pass_('')
 mail_count = len(m.list()[1])
 for index in range(1, mail_count):
     rsp, msglines,msgsize=m.retr(index)
