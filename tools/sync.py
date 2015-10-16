@@ -77,7 +77,8 @@ def sync(dir1, dir2, *dirs):
 if __name__ == '__main__':
     import sys
 
-    argv = sys.argv[1:]
-    sync(sys.argv[0], sys.argv[1], *argv[2:])
+    #argv = sys.argv[1:]
+    sync('/Users/gongxingfa/360云盘/Books', '/Users/gongxingfa/百度云同步盘/计算机书籍')
+    #sync(sys.argv[0], sys.argv[1], *argv[2:])
 
 
