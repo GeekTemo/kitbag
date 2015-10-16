@@ -137,13 +137,28 @@ class Cache(DoubleLinkedList):
         if freq_node.count == 0:
             self.remove_freq_node(freq_node)
 
+    def put(self, key, value):
+        if key in self.items:
+            self.items[key].data = value
+            self.access(key)
+        else:
+            self.insert(key, value)
+
+    def get(self, key):
+        if key in self.items:
+            self.access(key)
+            return self.items[key].data
+        else:
+            raise NotFoundException('Key not found')
+
+
 
 cache = Cache()
 cache.insert('key1', 'value1')
+print cache.get('key1')
 cache.insert('key2', 'value2')
-cache.access('key1')
-cache.access('key1')
-cache.delete_lfu()
+cache.put('key1', 'value1_1')
+print cache.get('key1')
 
 
 
